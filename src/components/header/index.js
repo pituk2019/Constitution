@@ -9,6 +9,8 @@ import {
   AccordionSummary,
   AccordionDetails,
 } from "@material-ui/core";
+import GavelIcon from "@material-ui/icons/Gavel";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const laws = [
   [
@@ -54,13 +56,15 @@ const laws = [
 
 const Header = () => (
   <Container>
-    <Typography variant="h1">Закон питукстана</Typography>
+    <Typography variant="h1">
+      Закон питукстана <GavelIcon />
+    </Typography>
     <List>
       {laws.map(([description, punishment], index) => {
         return (
           <ListItem divider>
             <Accordion disabled={!punishment}>
-              <AccordionSummary>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <ListItemText>
                   1.{index} {description}
                 </ListItemText>
@@ -73,6 +77,7 @@ const Header = () => (
         );
       })}
     </List>
+
     <Typography variant="caption">Редакция 1.0.0</Typography>
   </Container>
 );

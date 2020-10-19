@@ -1,7 +1,7 @@
 {
   "name": "pituk",
   "short_name": "pituk",
-  "start_url": "/",
+  "start_url": "./build",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
